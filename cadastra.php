@@ -26,17 +26,17 @@ Alvaro Alves - alvarolinkin@hotmail.com */
 
 //conecta ao API
 //dados para conexão ao API
-	$ip = '177.53.66.70';
-	$usuario = 'server';
-	$senharb = 's3051';
+	$ip = 'Ip from server where API is located';
+	$usuario = 'User';
+	$senharb = 'password';
 
 //salva usuário e senha na RB
 if ($API->connect($ip, $usuario, $senharb)){
 		$API->comm("/ip/hotspot/user/add", array(
          "name"     => $cpf,
          "password" => $senha,
-         "server" => "hotspot1",
-         "profile"  => "2mega",
+         "server" => "server",
+         "profile"  => "default",
 		));
 		$API->disconnect();
 	}
